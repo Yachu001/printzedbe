@@ -68,6 +68,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://printzedfe.vercel.app/"
+]
 ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [
