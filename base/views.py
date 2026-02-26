@@ -4,6 +4,11 @@ from .models import MarketingSolution, Portfolio, TeamMember
 from .serializers import *
 
 # Create your views here.
+from django.http import JsonResponse
+
+def home(request):
+    return JsonResponse({"status": "Backend is live 🚀"})
+
 class MarketingSolutionsViewSet(viewsets.ModelViewSet):
     queryset = MarketingSolution.objects.all()
     serializer_class = MarketingSolutionSerializer
